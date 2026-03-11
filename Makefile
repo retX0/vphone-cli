@@ -280,10 +280,10 @@ ramdisk_send:
 .PHONY: cfw_install cfw_install_dev cfw_install_jb
 
 cfw_install:
-	cd $(VM_DIR) && $(if $(SSH_PORT),SSH_PORT="$(SSH_PORT)") zsh "$(CURDIR)/$(SCRIPTS)/cfw_install.sh" .
+	cd $(VM_DIR) && $(if $(SSH_PORT),SSH_PORT="$(SSH_PORT)") _VPHONE_PATH="$$PATH" zsh "$(CURDIR)/$(SCRIPTS)/cfw_install.sh" .
 
 cfw_install_dev:
-	cd $(VM_DIR) && $(if $(SSH_PORT),SSH_PORT="$(SSH_PORT)") zsh "$(CURDIR)/$(SCRIPTS)/cfw_install_dev.sh" .
+	cd $(VM_DIR) && $(if $(SSH_PORT),SSH_PORT="$(SSH_PORT)") _VPHONE_PATH="$$PATH" zsh "$(CURDIR)/$(SCRIPTS)/cfw_install_dev.sh" .
 
 cfw_install_jb:
-	cd $(VM_DIR) && $(if $(SSH_PORT),SSH_PORT="$(SSH_PORT)") zsh "$(CURDIR)/$(SCRIPTS)/cfw_install_jb.sh" .
+	cd $(VM_DIR) && $(if $(SSH_PORT),SSH_PORT="$(SSH_PORT)") _VPHONE_PATH="$$PATH" zsh "$(CURDIR)/$(SCRIPTS)/cfw_install_jb.sh" .
