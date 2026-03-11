@@ -189,7 +189,7 @@ vm_new:
 	CPU="$(CPU)" MEMORY="$(MEMORY)" \
 	zsh $(SCRIPTS)/vm_create.sh --dir $(VM_DIR) --disk-size $(DISK_SIZE)
 
-amfidont_allow_vphone: build
+amfidont_allow_vphone: bundle
 	zsh $(SCRIPTS)/start_amfidont_for_vphone.sh
 
 boot_host_preflight: build
