@@ -47,4 +47,5 @@ sudo env PYTHONPATH="/Applications/Xcode.app/Contents/SharedFrameworks/LLDB.fram
     /usr/bin/python3 "$AMFIDONT_BIN" daemon \
     --path "$ENCODED_AMFI_PATH" \
     --cdhash "$CDHASH" \
-    --verbose
+    --verbose \
+    >/dev/null 2>&1
